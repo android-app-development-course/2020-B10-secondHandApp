@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 存储权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /><!--磁盘读写权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 解锁屏幕需要的权限 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 申请电源锁需要的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--震动权限-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!--android 9.0之后使用前台服务，需要添加权限-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.activity.MainActivity1"
+            tools:ignore="Instantiatable"
+            android:label="淘书叔">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:label="@string/title_activity_login"
+            tools:ignore="Instantiatable" />
+
+        <activity
+            android:name=".ui.activity.SearchResultActivity"
+            android:label="search"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".ui.activity.PublishTestActivity"
+            android:label="@string/app_name"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".ui.activity.ChatActivity"
+            android:label="chat"
+            tools:ignore="Instantiatable"/>
+
+        <activity
+            android:name=".ui.activity.DetailActivity"
+            android:label="chat"
+            tools:ignore="Instantiatable">
+        </activity>
+
+
+        <service
+            android:name=".JWebSocketClientService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".JWebSocketClientService$GrayInnerService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":gray" />
+    </application>
+
+</manifest>

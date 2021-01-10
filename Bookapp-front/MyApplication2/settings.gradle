@@ -1,0 +1,2 @@
+include ':app',':imagepicker',':WheelPicker','Common'
+rootProject.name = "My Application"

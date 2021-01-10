@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!-- 发布 -->
+    <!--用于启动websocket-->
+    <filter>
+        <filter-name>websocket</filter-name>
+        <filter-class>onion.bookapp.filter.StartWebSocket</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>websocket</filter-name>
+        <url-pattern>/Websocket</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>publishServlet</servlet-name>
+        <servlet-class>onion.bookapp.myservlet.control.HandlePublish</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>publishServlet</servlet-name>
+        <url-pattern>/publishServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 注册 -->
+    <servlet>
+        <servlet-name>registerServlet</servlet-name>
+        <servlet-class>onion.bookapp.myservlet.control.HandleRegister</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registerServlet</servlet-name>
+        <url-pattern>/registerServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 登录 -->
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>onion.bookapp.myservlet.control.HandleLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+
+<!--    筛选搜索-->
+    <servlet>
+        <servlet-name>screenSearchServlet</servlet-name>
+        <servlet-class>onion.bookapp.myservlet.control.HandleScreenSearch</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>screenSearchServlet</servlet-name>
+        <url-pattern>/screenSearchServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>WebSocketMessage</servlet-name>
+        <servlet-class>onion.bookapp.action.WebSocketMessage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WebSocketMessage</servlet-name>
+        <url-pattern>/WebSocketMessage</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UnReadMsg</servlet-name>
+        <servlet-class>onion.bookapp.action.UnReadMsg</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UnReadMsg</servlet-name>
+        <url-pattern>/UnReadMsg</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SendMsg</servlet-name>
+        <servlet-class>onion.bookapp.action.SendMsg</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SendMsg</servlet-name>
+        <url-pattern>/SendMsg</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdAllMsgStatus</servlet-name>
+        <servlet-class>onion.bookapp.action.UpdAllMsgStatus</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdAllMsgStatus</servlet-name>
+        <url-pattern>/UpdAllMsgStatus</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>IsReadMsg</servlet-name>
+        <servlet-class>onion.bookapp.action.IsReadMsg</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IsReadMsg</servlet-name>
+        <url-pattern>/IsReadMsg</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GetDetail</servlet-name>
+        <servlet-class>onion.bookapp.myservlet.control.HandleDetail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetDetail</servlet-name>
+        <url-pattern>/detailServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

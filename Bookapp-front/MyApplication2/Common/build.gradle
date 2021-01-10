@@ -1,0 +1,15 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"}
+ext {
+    isLibrary = true
+    pomArtifactId = "Common"
+    pomDescription = "Common of android picker"
+}
+
+dependencies {
+    implementation 'androidx.annotation:annotation:1.1.0'
+}
+
+

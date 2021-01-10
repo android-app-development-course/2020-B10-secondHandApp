@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="red">#FF0000</color>
+    <color name="theme_color">#02347B</color>
+    <color name="bar_grey_90">#464951</color>
+    <color name="bar_grey">#393a3e</color>
+    <color name="color_f6">#f6f6f6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0000ff</color>
+    <color name="color_fa">#fafafa</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_c61a04">#c61a04</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_d81e06">#d81e06</color>
+    <color name="color_b0b8b2">#b0b8b2</color>
+    <color name="color_333333">#333333</color>
+    <color name="myred">#eb4f38</color>
+    <color name="darkgray">#cccc</color>
+    <color name="color_white">#ffffff</color>
+    <color name="btn_press_color">#5677fc</color>
+    <color name="btn_pressed_color">#3ca0ec</color>
+    <color name="trans_bar_grey">#50393a3e</color>
+
+    <color name="color_eaeaea">#eaeaea</color>
+
+    <color name="background">#f1f1f1</color>
+
+    <color name="sred">#ff4141</color>
+    <color name="gold">#d8ab5c</color>
+    <color name="orange">#FF5100</color>
+    <color name="pink">#ffc0cb</color>
+    <color name="green">#FF34A350</color>
+    <color name="little_grey">#6DE7F6</color>
+    <color name="white1">#E6F0F1</color>
+
+    <!-- **************************pickerview选择器常用颜色值********************************** -->
+    <color name="pickerview_divider_color">#9D9D9D</color>
+    <color name="pickerview_cancel_text_color">#979696</color>
+    <color name="pickerview_submit_text_color">#FAA359</color>
+    <color name="pickerview_title_text_color">#1A78EC</color>
+    <color name="pickerview_center_text_color">#333333</color>
+
+    //聊天界面
+    <color name="jmui_jpush_blue">#2DD0CF</color>
+    <color name="menu_item_back_pres_color">#2DD0CF</color>
+    <color name="btn_send_textcolor">@color/white</color>
+    <color name="chat_text_color">#0B1816</color>
+</resources>

@@ -1,0 +1,76 @@
+（1）处理发布请求的servlet//wjp已完成
+URL：/publishServlet
+方法：post  
+参数：{
+publisherid：
+price:
+title:
+detail:
+sort:
+images:
+  }
+  response类型：app/json
+  返回内容{
+  “status”："success"/"fail"
+  }
+  
+  (2)处理注册的请求的servlet//wjp已完成
+  URL：/registerServlet
+  方法：post
+  参数：{
+  "logname":"",
+  "password":"",
+  again_password:"",
+  city:"",
+  major:"",
+  school:""
+  }
+  返回内容{
+  "status":"success"/"fail",
+  "errormessage" : ""
+  }
+  
+  (3)处理查询的请求的servlet//chx已完成
+  URl:/searchServlet
+  方法：get
+  参数：{
+  “words”：""
+  }
+  返回内容{
+   "primaryImage":"",
+   "title":"",
+   "price":""
+   }
+  
+(4)处理登录请求的servlet
+URL：/loginServlet
+方法:Post
+参数：{
+logname:
+password:
+}
+返回内容{
+status:success/failure
+token:
+}
+
+(5)处理筛选查询请求的servlet
+URL：/screenSearchServlet
+方法：post
+参数：{
+words：
+city
+university
+sort
+num
+index
+}
+返回内容{
+primaryImage：
+imagetype：
+goodsid：
+title：
+price：
+city：
+university：
+}
